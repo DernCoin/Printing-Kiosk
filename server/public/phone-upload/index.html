@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Gibson Memorial Library — Print</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="gibson-logo.png" alt="Gibson Memorial Library" class="logo" />
+      <p class="subtitle">Upload a Document to Print</p>
+    </header>
+
+    <main class="main">
+      <!-- Upload state -->
+      <div id="upload-section" class="section">
+        <p class="instructions">
+          Choose a file from your phone to send it to the library's print station.
+        </p>
+
+        <label for="file-input" class="upload-button" id="upload-label">
+          Choose a File
+        </label>
+        <input type="file" id="file-input" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" hidden>
+
+        <p class="file-types">PDF, Word documents, or images</p>
+      </div>
+
+      <!-- Progress state -->
+      <div id="progress-section" class="section hidden">
+        <p class="status-text" id="status-text">Uploading...</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-text" id="progress-text">0%</p>
+      </div>
+
+      <!-- Success state -->
+      <div id="success-section" class="section hidden">
+        <div class="checkmark">&#10003;</div>
+        <h2>Document Sent!</h2>
+        <p>You can put your phone away now.</p>
+        <p class="hint">Go back to the kiosk screen to choose your print settings.</p>
+      </div>
+
+      <!-- Error state -->
+      <div id="error-section" class="section hidden">
+        <div class="error-icon">!</div>
+        <h2>Something Went Wrong</h2>
+        <p id="error-message">Please try again.</p>
+        <button class="upload-button" id="retry-button">Try Again</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Your document is private and will not be kept after printing.</p>
+    </footer>
+  </div>
+
+  <script src="upload.js"></script>
+</body>
+</html>

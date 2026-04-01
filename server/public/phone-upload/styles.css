@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'Google Sans Flex';
+  src: url('/public/fonts/GoogleSansFlex_400Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Google Sans Flex';
+  src: url('/public/fonts/GoogleSansFlex_700Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #FFFFFF;
+  color: #333333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #757575;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.instructions {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 72px;
+  padding: 16px 32px;
+  background: #7CB342;
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.upload-button:active {
+  background: #558B2F;
+}
+
+.file-types {
+  font-size: 14px;
+  color: #757575;
+  margin-top: 8px;
+}
+
+/* Progress */
+.status-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #E8F5E9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #7CB342;
+  border-radius: 6px;
+  width: 0%;
+  transition: width 0.2s;
+}
+
+.progress-text {
+  font-size: 16px;
+  color: #757575;
+}
+
+/* Success */
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #7CB342;
+  color: #FFFFFF;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+#success-section h2 {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+#success-section p {
+  font-size: 18px;
+  color: #757575;
+}
+
+.hint {
+  font-size: 15px !important;
+  color: #757575;
+  margin-top: 16px;
+}
+
+/* Error */
+.error-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #D32F2F;
+  color: #FFFFFF;
+  font-size: 48px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+#error-section h2 {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+#error-message {
+  font-size: 16px;
+  color: #757575;
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 48px;
+}
+
+.footer p {
+  font-size: 13px;
+  color: #757575;
+}
