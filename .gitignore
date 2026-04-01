@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+_modules/
+
+# Build outputs
+dist/
+release/
+*.flatpak
+*.exe
+*.apk
+*.aab
+
+# Android build
+apps/patron/android/app/build/
+apps/staff/android/app/build/
+apps/patron/android/.gradle/
+apps/staff/android/.gradle/
+.gradle/
+
+# Expo
+.expo/
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+
+# Server data
+data/
+server/temp/
+server/uploads/
+
+# Signing keys — NEVER commit
+keys/
+
+# Environment
+.env
+.env.*
+
+# Bun
+bun.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Lock files (each app manages its own)
+package-lock.json

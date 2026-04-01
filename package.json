@@ -1,0 +1,19 @@
+{
+  "name": "print-kiosk",
+  "private": true,
+  "scripts": {
+    "server": "cd server && bun run index.ts",
+    "web:patron": "cd apps/patron && npx expo start --web --port 8095",
+    "web:staff": "cd apps/staff && npx expo start --web --port 8096",
+    "dev": "concurrently \"bun run server\" \"bun run web:patron\" \"bun run web:staff\"",
+    "dev:server": "cd server && bun --watch run index.ts",
+    "dev:patron": "concurrently \"bun run dev:server\" \"bun run web:patron\"",
+    "dev:staff": "concurrently \"bun run dev:server\" \"bun run web:staff\"",
+    "build:kiosk": "cd apps/patron && npm run build:desktop:linux",
+    "build:kiosk:win": "cd apps/patron && npm run build:desktop:win"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}
