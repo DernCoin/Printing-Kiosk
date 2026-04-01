@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Gibson Print Staff",
+    "slug": "print-kiosk-staff",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "scheme": "printkioskstaff",
+    "splash": {
+      "backgroundColor": "#FFFFFF"
+    },
+    "android": {
+      "package": "com.printkiosk.staff",
+      "adaptiveIcon": {
+        "backgroundColor": "#7CB342"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-av",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ]
+  }
+}

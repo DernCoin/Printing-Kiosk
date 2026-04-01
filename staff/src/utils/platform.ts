@@ -1,0 +1,7 @@
+import { Platform } from 'react-native';
+
+export const isWeb = Platform.OS === 'web';
+export const isAndroid = Platform.OS === 'android';
+export const isIOS = Platform.OS === 'ios';
+export const isMobile = isAndroid || isIOS;
+export const isElectron = isWeb && typeof window !== 'undefined' && typeof (window as any).electronAPI !== 'undefined';
